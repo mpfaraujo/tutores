@@ -1,11 +1,19 @@
-import {Media} from "@/utils/compara"
+import dados from '@/utils/tutorMatricula.json'
+import Link from 'next/link'
 export default function Home() {
+  const tutores = dados
   return (
-   <main> Vamos ver:<br/>
+   <main className='text-2xl m-auto'> Gerar relatório dos Tutores:<br/>
+   {tutores.map((tutor, index)=>{
+    return <>
+    <div><span className='m-2'>{tutor.Tutor}
+      </span>
+      <span className='m-2'><Link href={`./tutor/${tutor.id}`} className='text-blue-500'>{tutor.id}</Link></span>
+    </div>
+    
+    </>
+   })}
 
-   <div>{Media(1, 1)}</div>
-   <div>{Media(3, 2)}</div>
-   <div>{Media(3, 6)}</div>
    </main>
   )
 }
