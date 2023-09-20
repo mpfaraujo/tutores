@@ -1,0 +1,1022 @@
+[
+  {
+ 
+    "id": "1",
+    "Tutor": "Alberto Jorge Silva de Lima",
+    "tutorandos": [
+      {
+        "Nome": "Carlos Eduardo Moreira Alves Aguilar",
+        "Turma": "1AELT",
+        "Matrícula": "2100531ELTINT"
+      },
+      {
+        "Nome": "Felipe Bouças Lopes",
+        "Turma": "1AELT",
+        "Matrícula": "2100448ELTINT"
+      },
+      {
+        "Nome": "João Davi da Silva Borba",
+        "Turma": "1AELT",
+        "Matrícula": "2201855ELTINT"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "Tutor": "Alexandre Martinez dos Santos",
+    "tutorandos": [
+      {
+        "Nome": "Alice Braga Souza",
+        "Turma": "1BSEG",
+        "Matrícula": "2300214SEGINT"
+      },
+      {
+        "Nome": "Ana Clara Teles Freitas",
+        "Turma": "1BSEG",
+        "Matrícula": "2300337SEGINT"
+      },
+      {
+        "Nome": "Anouk de Brito Rebelo",
+        "Turma": "1BSEG",
+        "Matrícula": "2300209SEGINT"
+      },
+      {
+        "Nome": "Luiz Matheus da Conceição Nascimento",
+        "Turma": "1BSEG",
+        "Matrícula": "2301893SEGINT"
+      },
+      {
+        "Nome": "Wanessa da Silva Felix",
+        "Turma": "1BSEG",
+        "Matrícula": "2300251SEGINT"
+      },
+      {
+        "Nome": "Roger Caldeira de Almeida",
+        "Turma": "1BSEG",
+        "Matrícula": "2201755SEGINT"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "Tutor": "Aline Riccioni de Melos",
+    "tutorandos": [
+      {
+        "Nome": "Breno da Silva Assunção",
+        "Turma": "1BINFO",
+        "Matrícula": "2201906INFOINT"
+      },
+      {
+        "Nome": "Daniel Freitas de Oliveira",
+        "Turma": "1BINFO",
+        "Matrícula": "2300175INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "Tutor": "Ana Paula Rocha Augusto Lopes",
+    "tutorandos": [
+      {
+        "Nome": "Cauê Alves Pereira",
+        "Turma": "1BINFO",
+        "Matrícula": "2202085INFOINT"
+      },
+      {
+        "Nome": "Luís Gustavo Matias Corrêa",
+        "Turma": "1BTEL",
+        "Matrícula": "2202324TELEINT"
+      },
+      {
+        "Nome": "Maria Fernanda da Costa Louzada",
+        "Turma": "1BINFO",
+        "Matrícula": "2202415INFOINT"
+      },
+      {
+        "Nome": "Mayara Silva Salles de Andrade",
+        "Turma": "2BSEG",
+        "Matrícula": "2100748SEGINT"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "Tutor": "Antonio M.B. Feres",
+    "tutorandos": [
+      {
+        "Nome": "Breno Henrique Teixeira Ferreira",
+        "Turma": "1BEL",
+        "Matrícula": "2202436ELINT"
+      },
+      {
+        "Nome": "Marya Eduarda da Silva Martins",
+        "Turma": "1BEL",
+        "Matrícula": "2300256ELINT"
+      },
+      {
+        "Nome": "Thalles Henrique Barbalho dos Santos",
+        "Turma": "1BEL",
+        "Matrícula": "2301782ELINT"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "Tutor": "Betânia Gomes da Silvia",
+    "tutorandos": [
+      {
+        "Nome": "Guilherme Menezes Filgueiras",
+        "Turma": "2BEL",
+        "Matrícula": "2100342ELINT"
+      },
+      {
+        "Nome": "Patrick Carvalho de Castro",
+        "Turma": "2BEL",
+        "Matrícula": "2100752ELINT"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "Tutor": "Bruno Repsold Torós",
+    "tutorandos": [
+      {
+        "Nome": "Ana Beatriz Estevam da Costa",
+        "Turma": "2BSEG",
+        "Matrícula": "2202508SEGINT"
+      },
+      {
+        "Nome": "Pedro de Lucca Rodrigues Brito",
+        "Turma": "2AMEC",
+        "Matrícula": "2100459MECINT"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "Tutor": "Carlos Serman",
+    "tutorandos": [
+      {
+        "Nome": "Ana Clara Freire de Souza",
+        "Turma": "1AEST",
+        "Matrícula": "2201915ESTINT"
+      },
+      {
+        "Nome": "Angelo Gabriel Cavalcanti Merencio",
+        "Turma": "1AEST",
+        "Matrícula": "2202363ESTINT"
+      },
+      {
+        "Nome": "Brenda Pereira Cordeiro",
+        "Turma": "1AEST",
+        "Matrícula": "2202124ESTINT"
+      },
+      {
+        "Nome": "Daniel Martins Marques",
+        "Turma": "1AEST",
+        "Matrícula": "2202249ESTINT"
+      },
+      {
+        "Nome": "Kaick de Carvalho Costa",
+        "Turma": "1AEST",
+        "Matrícula": "2202217ESTINT"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "Tutor": "Caroline Araújo Bordalo",
+    "tutorandos": [
+      {
+        "Nome": "Bruno Gabriel dos Santos Cardoso",
+        "Turma": "1BMEC",
+        "Matrícula": "2100186MECINT"
+      },
+      {
+        "Nome": "João Gabriel de Sousa Melo",
+        "Turma": "1BMEC",
+        "Matrícula": "2202262MECINT"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "Tutor": "Celso Marques",
+    "tutorandos": [
+      {
+        "Nome": "Arthur Manoel de Araujo P M Leite",
+        "Turma": "1BADM",
+        "Matrícula": "2201832ADMINT"
+      },
+      {
+        "Nome": "Eduardo Rocha Rodrigues",
+        "Turma": "1BADM",
+        "Matrícula": "2202496ADMINT"
+      },
+      {
+        "Nome": "Caua Rodrigues das Chagas",
+        "Turma": "1BADM",
+        "Matrícula": "2202385ADMINT"
+      },
+      {
+        "Nome": "Kaua Pimenta Lucas Matias",
+        "Turma": "1BADM",
+        "Matrícula": "2202362ADMINT"
+      },
+      {
+        "Nome": "Vitor de Albuquerque Ribeiro",
+        "Turma": "1BADM",
+        "Matrícula": "2100070ADMINT"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "Tutor": "Cristiana Rosa Valença",
+    "tutorandos": [
+      {
+        "Nome": "Joao Felipe Fernandes Barros da Silva",
+        "Turma": "1BELT",
+        "Matrícula": "2202276ELTINT"
+      },
+      {
+        "Nome": "Tiago Koiti R. Uemura",
+        "Turma": "1BELT",
+        "Matrícula": "2100210ELTINT"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "Tutor": "Daniel Leuback",
+    "tutorandos": [
+      {
+        "Nome": "Gabrielle Sousa de Oliveira",
+        "Turma": "1BADM",
+        "Matrícula": "2300457ADMINT"
+      },
+      {
+        "Nome": "Nathaly Ribeiro dos Santos",
+        "Turma": "1BADM",
+        "Matrícula": "2300131ADMINT"
+      },
+      {
+        "Nome": "Vinicius Jose Barbosa Oliveira",
+        "Turma": "1BTEL",
+        "Matrícula": "2202411TELEINT"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "Tutor": "Daniela Spielman Grosman",
+    "tutorandos": [
+      {
+        "Nome": "Almir Pereira Krauss",
+        "Turma": "1BMEC",
+        "Matrícula": "2300597MECINT"
+      },
+      {
+        "Nome": "Caroline Oliveira Ferreira",
+        "Turma": "1BMEC",
+        "Matrícula": "2300691MECINT"
+      },
+      {
+        "Nome": "Davi Arnoud Nabor",
+        "Turma": "1BEL",
+        "Matrícula": "2300260ELINT"
+      },
+      {
+        "Nome": "Gustavo de Souza Silveira dos Reis",
+        "Turma": "1BMEC",
+        "Matrícula": "2300084MECINT"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "Tutor": "Diego Casais Moreira",
+    "tutorandos": [
+      {
+        "Nome": "Bernardo Renado Alves",
+        "Turma": "1AINFO",
+        "Matrícula": "2201823INFOINT"
+      },
+      {
+        "Nome": "Matheus Santos Paulino",
+        "Turma": "1AINFO",
+        "Matrícula": "2202445INFOINT"
+      },
+      {
+        "Nome": "Natan Dias Salazar Costa",
+        "Turma": "1BINFO",
+        "Matrícula": "2201952INFOINT"
+      },
+      {
+        "Nome": "Pedro Alexsander de Souza Silva",
+        "Turma": "1AINFO",
+        "Matrícula": "2202131INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "Tutor": "Diogo Dantas de Sousa",
+    "tutorandos": [
+      {
+        "Nome": "Andrey Júnior da Silva Fontes",
+        "Turma": "1BINFO",
+        "Matrícula": "2100164INFOINT"
+      },
+      {
+        "Nome": "Caio Eduardo Silva Peres Marques",
+        "Turma": "1BINFO",
+        "Matrícula": "2100205INFOINT"
+      },
+      {
+        "Nome": "Gabriel de Jesus Felix dos Santos",
+        "Turma": "1BINFO",
+        "Matrícula": "2202024INFOINT"
+      },
+      {
+        "Nome": "RICARDO AZRAEL GOMES FASSI",
+        "Turma": "1BINFO",
+        "Matrícula": "2201941INFOINT"
+      }    ]
+  },
+  {
+    "id": "16",
+    "Tutor": "Fabricia Eugenia G de Andrade",
+    "tutorandos": [
+      {
+        "Nome": "Matheus Henrique de Andrade Leão",
+        "Turma": "1AEL",
+        "Matrícula": "2201939ELINT"
+      },
+      {
+        "Nome": "Victor Hugo Salvador Parra Urbina",
+        "Turma": "1AED",
+        "Matrícula": "2202035EDINT"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "Tutor": "Fernanda de Melo Pereira",
+    "tutorandos": [
+      {
+        "Nome": "Izaias Silva Santos",
+        "Turma": "1BINFO",
+        "Matrícula": "2202214INFOINT"
+      },
+      {
+        "Nome": "JOAO PEDRO LIRA DA SILVEIRA",
+        "Turma": "1BINFO",
+        "Matrícula": "2300362INFOINT"
+      },
+      {
+        "Nome": "Thiago de Moura Barros Canuto",
+        "Turma": "1BINFO",
+        "Matrícula": "2100022INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "Tutor": "Helio Vargas Chaves de Souza",
+    "tutorandos": [
+      {
+        "Nome": "Igor Damião Barbosa dos Santos",
+        "Turma": "2AEL",
+        "Matrícula": "2100320ELINT"
+      },
+      {
+        "Nome": "JOSE SOARES DA SILVA FILHO",
+        "Turma": "2AEL",
+        "Matrícula": "2201927ELINT"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "Tutor": "Jessica Gonçalves",
+    "tutorandos": [
+      {
+        "Nome": "Luan Fernandes Rodrigues",
+        "Turma": "1BMEC",
+        "Matrícula": "2300085MECINT"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "Tutor": "João André Fernandes da Silva",
+    "tutorandos": [
+      {
+        "Nome": "Caio Costa T Rocha",
+        "Turma": "1BTEL",
+        "Matrícula": "2201810TELEINT"
+      },
+      {
+        "Nome": "Luene do Prado Alves",
+        "Turma": "2BINFO",
+        "Matrícula": "2100080INFOINT"
+      },
+      {
+        "Nome": "Matheus Gonçalves da Silva Cardoso",
+        "Turma": "1BED",
+        "Matrícula": "2201787EDINT"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "Tutor": "José Lopes Raed",
+    "tutorandos": [
+      {
+        "Nome": "Carlos André Sammaritano Silva",
+        "Turma": "2AEL",
+        "Matrícula": "2100508ELINT"
+      },
+      {
+        "Nome": "Lucas Henrique de Souza",
+        "Turma": "2AEL",
+        "Matrícula": "2100509ELINT"
+      },
+      {
+        "Nome": "Matheus Ribeiro Machado",
+        "Turma": "2AEL",
+        "Matrícula": "2201852ELINT"
+      },
+      {
+        "Nome": "Mikaella Ferreira Farias da Silva",
+        "Turma": "2AEL",
+        "Matrícula": "2100738ELINT"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "Tutor": "Jucileia Filomena Barbosa Severino",
+    "tutorandos": [
+      {
+        "Nome": "Daniel Ferreira Dias Gomes",
+        "Turma": "2BEL",
+        "Matrícula": "2202313ELINT"
+      },
+      {
+        "Nome": "Giovana Joya Leal",
+        "Turma": "2BEL",
+        "Matrícula": "2202002ELINT"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "Tutor": "Jucilene Braga Alves Mauricio Nogueira",
+    "tutorandos": [
+      {
+        "Nome": "Alisson Gabriel Mariano Mello",
+        "Turma": "1AMEC",
+        "Matrícula": "2202426MECINT"
+      },
+      {
+        "Nome": "Arthur Alves Abreu Firmino",
+        "Turma": "1AMEC",
+        "Matrícula": "2000190MECINT"
+      },
+      {
+        "Nome": "Arthur dos Santos Andrade Braga",
+        "Turma": "1AMEC",
+        "Matrícula": "2202152MECINT"
+      },
+      {
+        "Nome": "Breno da Silva Rodrigues",
+        "Turma": "1AMEC",
+        "Matrícula": "2202353MECINT"
+      },
+      {
+        "Nome": "Joaquim Fernando Barbosa da Silva",
+        "Turma": "1AMEC",
+        "Matrícula": "2202137MECINT"
+      },
+      {
+        "Nome": "Luan da Silva Cabral",
+        "Turma": "1AMEC",
+        "Matrícula": "2202064MECINT"
+      },
+      {
+        "Nome": "Victor Hugo Machado de Aguiar",
+        "Turma": "1AMEC",
+        "Matrícula": "2201841MECINT"
+      },
+      {
+        "Nome": "Victor Hugo Salgueiro Sampaio",
+        "Turma": "1AMEC",
+        "Matrícula": "2202001MECINT"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "Tutor": "Julio Cesar Neves Campagnolo",
+    "tutorandos": [
+      {
+        "Nome": "Arthur Henrique Santos Carneiro",
+        "Turma": "1BEL",
+        "Matrícula": "2202485ELINT"
+      },
+      {
+        "Nome": "Cauã ferreira baltar mendes",
+        "Turma": "1BEL",
+        "Matrícula": "2100601ELINT"
+      },
+      {
+        "Nome": "João Vitor Chaves Moreira",
+        "Turma": "1BEL",
+        "Matrícula": "2202534ELINT"
+      },
+      {
+        "Nome": "Kauã Fragoso Gomes",
+        "Turma": "1AEL",
+        "Matrícula": "2202273ELINT"
+      },
+      {
+        "Nome": "Victor Barbosa Garcia",
+        "Turma": "1BEL",
+        "Matrícula": "2202096ELINT"
+      },
+      {
+        "Nome": "YAGO ZOBAR GONÇALVES MARQUES DA CRUZ",
+        "Turma": "1BEL",
+        "Matrícula": "2100357ELINT"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "Tutor": "Kátia Cilene Cunha de Aguiar",
+    "tutorandos": [
+      {
+        "Nome": "Davi Petzold de Souza Oliveira",
+        "Turma": "1BINFO",
+        "Matrícula": "2300510INFOINT"
+      },
+      {
+        "Nome": "Guilherme Gomes de Lima",
+        "Turma": "1BINFO",
+        "Matrícula": "2100166INFOINT"
+      },
+      {
+        "Nome": "Guilherme Vial Santoro dos Santos",
+        "Turma": "1BINFO",
+        "Matrícula": "2301883INFOINT"
+      },
+      {
+        "Nome": "Kaua Fernandes de Paula",
+        "Turma": "1BINFO",
+        "Matrícula": "2202424INFOINT"
+      },
+      {
+        "Nome": "Lucas Rodrigues Gomes",
+        "Turma": "1BINFO",
+        "Matrícula": "2202442INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "Tutor": "Keila Lúcio de Carvalho",
+    "tutorandos": [
+      {
+        "Nome": "Maria Vitoria Botto Ferreira Barbosa",
+        "Turma": "1BINFO",
+        "Matrícula": "2202154INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "Tutor": "Leonardo Diniz do Couto",
+    "tutorandos": [
+      {
+        "Nome": "Marlon Rosa da Silva",
+        "Turma": "1AEVE",
+        "Matrícula": "2202453EVEINT"
+      },
+      {
+        "Nome": "Patrick Monteiro de Almeida",
+        "Turma": "1AEVE",
+        "Matrícula": "2100640EVEINT"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "Tutor": "Leticia Labatti Terra",
+    "tutorandos": [
+      {
+        "Nome": "Gabriel Mello Bueno Pereira",
+        "Turma": "1AMEC",
+        "Matrícula": "2202027MECINT"
+      },
+      {
+        "Nome": "João Gabriel Souza de Oliveira",
+        "Turma": "1AMEC",
+        "Matrícula": "2202382MECINT"
+      },
+      {
+        "Nome": "Matheus Henrique Assis dos Santos",
+        "Turma": "1AMEC",
+        "Matrícula": "2201808MECINT"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "Tutor": "Lidiane Oliveira",
+    "tutorandos": [
+      {
+        "Nome": "AGHATA FONTES DE LIMA",
+        "Turma": "1AEVE",
+        "Matrícula": "2201962EVEINT"
+      },
+      {
+        "Nome": "Emanuelly Gomes da Silva",
+        "Turma": "1AEVE",
+        "Matrícula": "2300451EVEINT"
+      },
+      {
+        "Nome": "Jonathan Araujo de Pinho",
+        "Turma": "1AEVE",
+        "Matrícula": "2202140EVEINT"
+      },
+      {
+        "Nome": "Júlia Acácio Muniz Vicente",
+        "Turma": "1AEVE",
+        "Matrícula": "2202495EVEINT"
+      },
+      {
+        "Nome": "Mell Christine Sirqueira de Mello",
+        "Turma": "1AEVE",
+        "Matrícula": "2100266EVEINT"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "Tutor": "Manoel Oliveira Sales",
+    "tutorandos": [
+      {
+        "Nome": "Guilherme dos Santos Silva",
+        "Turma": "1AMEC",
+        "Matrícula": "2201881MECINT"
+      },
+      {
+        "Nome": "Kauã Pereira Costa",
+        "Turma": "1AELT",
+        "Matrícula": "2202421ELTINT"
+      },
+      {
+        "Nome": "Luan Gabriel Silva Hentzy",
+        "Turma": "1AELT",
+        "Matrícula": "2201721ELTINT"
+      },
+      {
+        "Nome": "Tales Ribeiro Ferreira",
+        "Turma": "1AMEC",
+        "Matrícula": "2202245MECINT"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "Tutor": "Márcia Andrade Morais Cabral",
+    "tutorandos": [
+      {
+        "Nome": "Nayro Clasen Apparecido dos Santos",
+        "Turma": "1AEL",
+        "Matrícula": "2202108ELINT"
+      },
+      {
+        "Nome": "Rafaelly de Freitas da Silva",
+        "Turma": "1AEL",
+        "Matrícula": "2202406ELINT"
+      },
+      {
+        "Nome": "Richard Araujo Bitencourt de Oliveira",
+        "Turma": "1AEL",
+        "Matrícula": "2201765ELINT"
+      },
+      {
+        "Nome": "Thallya Grazielle Cassiano Barreto",
+        "Turma": "1AEL",
+        "Matrícula": "2201803ELINT"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "Tutor": "Mariana Vieira de Brito",
+    "tutorandos": [
+      {
+        "Nome": "Ana Julia Porto Trindade",
+        "Turma": "1BTEL",
+        "Matrícula": "2202338TELEINT"
+      },
+      {
+        "Nome": "José Carlos Brite Rodrigues",
+        "Turma": "1BINFO",
+        "Matrícula": "2202084TELEINT"
+      },
+      {
+        "Nome": "Marcelo da Silva Magalhães Júnior",
+        "Turma": "1BTEL",
+        "Matrícula": "2202084TELEINT"
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "Tutor": "Mariana Vitor Renou",
+    "tutorandos": [
+      {
+        "Nome": "Hillary Sofia Sousa Silva",
+        "Turma": "1BELT",
+        "Matrícula": "2202295ELTINT"
+      },
+      {
+        "Nome": "Joao Vitor Alves Clemente",
+        "Turma": "1BELT",
+        "Matrícula": "2202060ELTINT"
+      },
+      {
+        "Nome": "Juan Guilherme Pereira Nunes",
+        "Turma": "1BELT",
+        "Matrícula": "2300197ELTINT"
+      },
+      {
+        "Nome": "Sayori Victoria Teixeira Akel",
+        "Turma": "1BELT",
+        "Matrícula": "2100074ELTINT"
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "Tutor": "Nancy Regina Mathias Rabelo",
+    "tutorandos": [
+      {
+        "Nome": "Anna Maria Barreto Alves",
+        "Turma": "1AMET",
+        "Matrícula": "2100525METINT"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "Tutor": "Patricia Guimarães Crosseti",
+    "tutorandos": [
+      {
+        "Nome": "Júlia de Souza Leite",
+        "Turma": "2AEL",
+        "Matrícula": "2100199ELINT"
+      },
+      {
+        "Nome": "Juliana Brito de Lima",
+        "Turma": "2AEL",
+        "Matrícula": "2202374ELINT"
+      },
+      {
+        "Nome": "Luciane Teixeira Vitorino",
+        "Turma": "2AEL",
+        "Matrícula": "2202535ELINT"
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "Tutor": "Renato Lanna Fernandez",
+    "tutorandos": [
+      {
+        "Nome": "Carlos Eduardo Assis das Dores",
+        "Turma": "1AMET",
+        "Matrícula": "2100163METINT"
+      },
+      {
+        "Nome": "Leticia Rimes Queiroz",
+        "Turma": "1AMET",
+        "Matrícula": "2201992METINT"
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "Tutor": "Rosane Manfrinato de Medeiros",
+    "tutorandos": [
+      {
+        "Nome": "Izabel Rodrigues Mello",
+        "Turma": "2AEVE",
+        "Matrícula": "2202413EVEINT"
+      },
+      {
+        "Nome": "Raffael Marzoa Pereira",
+        "Turma": "2AEVE",
+        "Matrícula": "2201934EVEINT"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "Tutor": "Sérgio Eduardo Silva Duarte",
+    "tutorandos": [
+      {
+        "Nome": "Fernando Vieira de Souza",
+        "Turma": "1AINFO",
+        "Matrícula": "2300360INFOINT"
+      },
+      {
+        "Nome": "Gustavo Ligeiro Castro Araujo",
+        "Turma": "1AEL",
+        "Matrícula": "2100291ELINT"
+      },
+      {
+        "Nome": "Iori Henri da Silva Teixeira",
+        "Turma": "1AINFO",
+        "Matrícula": "2100254INFOINT"
+      },
+      {
+        "Nome": "Julia Souza Valladão Silva",
+        "Turma": "1AINFO",
+        "Matrícula": "2201845INFOINT"
+      },
+      {
+        "Nome": "Leticia dos Santos Virginio",
+        "Turma": "1AINFO",
+        "Matrícula": "2100760INFOINT"
+      },
+      {
+        "Nome": "Luis Pedro Aguiar Correia",
+        "Turma": "1AEL",
+        "Matrícula": "2100293ELINT"
+      },
+      {
+        "Nome": "Victor Freitas Matos",
+        "Turma": "1AINFO",
+        "Matrícula": "2100758INFOINT"
+      },
+      {
+        "Nome": "Yago Gabriel de Aquino Thome",
+        "Turma": "1AINFO",
+        "Matrícula": "2202132INFOINT"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "Tutor": "Tarcila Soares Formiga",
+    "tutorandos": [
+      {
+        "Nome": "Anna Luiza da Silva de Souza",
+        "Turma": "1BADM",
+        "Matrícula": "2202537ADMINT"
+      },
+      {
+        "Nome": "Grazielle Vitória Neves Gomes",
+        "Turma": "2BTEL",
+        "Matrícula": "2202274TELEINT"
+      },
+      {
+        "Nome": "Maria Clara Santos de Oliveira",
+        "Turma": "1BADM",
+        "Matrícula": "2100624ADMINT"
+      },
+      {
+        "Nome": "Vitória Camile Balerini da Silva",
+        "Turma": "2BTEL",
+        "Matrícula": "2202150TELEINT"
+      },
+      {
+        "Nome": "Vitoria Marques Moraes",
+        "Turma": "1BADM",
+        "Matrícula": "2202316ADMINT"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "Tutor": "Tatiana de Oliveira Almeida",
+    "tutorandos": [
+      {
+        "Nome": "Bruna Marques Costa",
+        "Turma": "1AINFO",
+        "Matrícula": "2300444INFOINT"
+      },
+      {
+        "Nome": "Cristina Pittigliani de Souza Lopes",
+        "Turma": "2AED",
+        "Matrícula": "2201973EDINT"
+      },
+      {
+        "Nome": "Yuri Brito Agra",
+        "Turma": "1AMET",
+        "Matrícula": "2202158METINT"
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "Tutor": "Thiago Rodrigues da Silva",
+    "tutorandos": [
+      {
+        "Nome": "Davi Machado Pinto da Silva",
+        "Turma": "1BEL",
+        "Matrícula": "2300556ELINT"
+      },
+      {
+        "Nome": "Davi Ricardo de Oliveira",
+        "Turma": "1BEL",
+        "Matrícula": "2202288ELINT"
+      },
+      {
+        "Nome": "Eduarda Athayde Peixoto",
+        "Turma": "1BEL",
+        "Matrícula": "2300628ELINT"
+      },
+      {
+        "Nome": "Hugo Fellipe Brito de Oliveira",
+        "Turma": "1BEL",
+        "Matrícula": "2300240ELINT"
+      },
+      {
+        "Nome": "Luana Viana Reis",
+        "Turma": "1BEL",
+        "Matrícula": "2300257ELINT"
+      },
+      {
+        "Nome": "Maria Luiza da Silva Souza",
+        "Turma": "1BEL",
+        "Matrícula": "2300237ELINT"
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "Tutor": "Valena Ribeiro Garcia Ramos",
+    "tutorandos": [
+
+    ]
+  },
+  {
+    "id": "43",
+    "Tutor": "Valeria Pereira",
+    "tutorandos": [
+      {
+        "Nome": "Gabriel Sardinha Gomes",
+        "Turma": "1AELT",
+        "Matrícula": "2202147ELTINT"
+      },
+      {
+        "Nome": "Joyce Andrade dos Santos",
+        "Turma": "1AEVE",
+        "Matrícula": "2202474EVEINT"
+      },
+      {
+        "Nome": "Maria Clara Baroni Silva",
+        "Turma": "1AEVE",
+        "Matrícula": "2202307EVEINT"
+      },
+      {
+        "Nome": "Ryan Luis Pacheco da Silva",
+        "Turma": "1AMEC",
+        "Matrícula": "2202403MECINT"
+      },
+      {
+        "Nome": "Samuel Gregório Ferreira",
+        "Turma": "1AELT",
+        "Matrícula": "2201719ELTINT"
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "Tutor": "Vanessa de Oliveira Brunow",
+    "tutorandos": [
+      {
+        "Nome": "Anna Julya da Silva Abreu",
+        "Turma": "1AEL",
+        "Matrícula": "2202016ELINT"
+      },
+      {
+        "Nome": "Anny Victoria da Silva de Carvalho",
+        "Turma": "1AEL",
+        "Matrícula": "2202330ELINT"
+      },
+      {
+        "Nome": "Luiz Fernando Garcia de Almeida",
+        "Turma": "2AED",
+        "Matrícula": "2201785EDINT"
+      }
+    ]
+  }
+]
