@@ -2,7 +2,7 @@ import Image from "next/image"
 export function Media(a:any, b:any) {
     const M:number = (.5*(parseFloat(a) + parseFloat(b)))
 
-    if (M > 0 && M <=4){
+    if (M >= 0 && M <=4){
 
             return <Image width={33} height={33} alt="Nota Ruim" src="/notaruim.svg" />
 }
