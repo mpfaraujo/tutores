@@ -55,7 +55,8 @@ export default function Page ({params}:{params:{id:string}}){
                         
                         return (
                             <FolhaA4 key={tutorando.Nome}>
-                                <span className="text-indigo-800 bg-gray-100 w-full">{tutorando.Nome}</span>
+                                <span className="text-indigo-800 bg-gray-100 w-full mr-3">{tutorando.Nome}</span>
+                                <span className="text-indigo-800 bg-gray-100 w-full mx-3">{tutorando.Turma}</span>
                                 <Boletim disciplinas={aluno.Disciplinas} />
                             </FolhaA4>)
                     })}
