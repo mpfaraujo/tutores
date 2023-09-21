@@ -1,6 +1,5 @@
 [
   {
- 
     "id": "1",
     "Tutor": "Alberto Jorge Silva de Lima",
     "tutorandos": [
@@ -70,6 +69,11 @@
         "Nome": "Daniel Freitas de Oliveira",
         "Turma": "1BINFO",
         "Matrícula": "2300175INFOINT"
+      },
+      {
+        "Nome": "Miguel Torres Costa",
+        "Turma": "1BINFO",
+        "Matrícula": "2202095INFOINT"
       }
     ]
   },
@@ -298,24 +302,9 @@
     "Tutor": "Diego Casais Moreira",
     "tutorandos": [
       {
-        "Nome": "Bernardo Renado Alves",
-        "Turma": "1AINFO",
-        "Matrícula": "2201823INFOINT"
-      },
-      {
-        "Nome": "Matheus Santos Paulino",
-        "Turma": "1AINFO",
-        "Matrícula": "2202445INFOINT"
-      },
-      {
         "Nome": "Natan Dias Salazar Costa",
         "Turma": "1BINFO",
         "Matrícula": "2201952INFOINT"
-      },
-      {
-        "Nome": "Pedro Alexsander de Souza Silva",
-        "Turma": "1AINFO",
-        "Matrícula": "2202131INFOINT"
       }
     ]
   },
@@ -342,7 +331,8 @@
         "Nome": "RICARDO AZRAEL GOMES FASSI",
         "Turma": "1BINFO",
         "Matrícula": "2201941INFOINT"
-      }    ]
+      }
+    ]
   },
   {
     "id": "16",
@@ -963,9 +953,7 @@
   {
     "id": "42",
     "Tutor": "Valena Ribeiro Garcia Ramos",
-    "tutorandos": [
-
-    ]
+    "tutorandos": []
   },
   {
     "id": "43",
