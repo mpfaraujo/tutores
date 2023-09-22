@@ -36,6 +36,7 @@ next-env.d.ts
 
 #scripts
 /utils/pegamatr.mjs
+/utils/edita.mjs
 /utils/tutores.js
 /utils/tutores.json
 /utils/dados.json
