@@ -93,7 +93,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
 
       {disciplinasDoCurso.map(async (disc)=>{
         const alunosdisc = await pegaCurso(`${params.curso}&disciplina=${disc}`)
-        return (<div>
+        return (<div key={disc}>
           <FolhaA4>
             <div className='m-4'>
               <h1 className='text-lg text-center'>{disc}</h1>
