@@ -19,7 +19,7 @@ export default function Page ({params}:{params:{id:string}}){
                     <FolhaA4>
                     <div>
                         <h1 className="text-xl">{tutor?.Tutor}</h1>
-                    Você tem {tutor?.tutorandos.length} {tutor?.tutorandos.length===1? "tutorando":(tutor?.tutorandos.length ===0?"Você não tem tutorandos":"tutorandos")}.
+                        {tutor?.tutorandos.length ===0?"Você não tem tutorandos.":(tutor?.tutorandos.length===1?`Você tem 1 tutorando.`:`Você tem ${tutor?.tutorandos.length} tutorandos.`)}
                     </div>
                     <div>
                         Para cada tutorando vc verá a lista com as disciplinas que ele está cursando e alguns símbolos para analisar a situação do aluno:
