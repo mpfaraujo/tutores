@@ -1,114 +1,51 @@
 import React from 'react';
 import { FolhaA4 } from "@/components/FolhaA4/folhaa4";
 import { cursos } from "@/utils/codcursos";
+import { agruparAlunosPorTutor, extractUniqueDisciplines, contarAlunos, calculateAverageForDiscipline } from '@/utils/utilidades';
 
 interface Aluno {
   Matrícula: string;
   Turma: string;
   Nome: string;
   Tutor: string;
+  Status:string
   Disciplinas: {
     Disciplina: string;
     Nota_Bim_1: string;
     Nota_Bim_2: string;
     Nota_Bim_3: string;
     Nota_Bim_4: string;
+    Média_Parcial_12:string
     Situação: string;
   }[];
 }
+type AlunosAgrupados = { [key: string]: Aluno[] };
 
 async function pegaCurso(cod: string) {
   const res = await fetch(`https://mpfaraujo.com.br/api/boletim/curso?codigo_curso=${cod}`, { cache: "no-cache" });
   return res.json();
 }
 
-const calcularMedia = (nota1: number, nota2: number) => {
-  return 0.5 * (nota1 + nota2);
-};
-
 const Page = async ({ params }: { params: { curso: string } }) => {
   const alunos: Aluno[] = await pegaCurso(params.curso);
   const curso = cursos.find(item => item.cod === params.curso);
 
-  // Função para agrupar alunos por tutor
-  const agruparAlunosPorTutor = () => {
-    const alunosAgrupados: { [key: string]: Aluno[] } = {};
 
-    alunos.forEach((aluno: Aluno) => {
-      const { Nome, Tutor } = aluno;
+  const alunosAgrupados:AlunosAgrupados = agruparAlunosPorTutor(alunos) as AlunosAgrupados
 
-      if (!alunosAgrupados[Tutor]) {
-        alunosAgrupados[Tutor] = [];
-      }
-
-      alunosAgrupados[Tutor].push(aluno);
-    });
-
-    return alunosAgrupados;
-  };
-
-  const alunosAgrupados = agruparAlunosPorTutor();
-
-  const listarDisciplinasUnicas = (): { disciplina: string; notas: number[] }[] => {
-    const disciplinasUnicas = new Map<string, number[]>();
-
-    alunos.forEach((aluno) => {
-      aluno.Disciplinas.forEach((disciplina) => {
-        const nomeDisciplina = disciplina.Disciplina.replace(/.*? - /, '');
-        if (nomeDisciplina !== "TECINT TUT - TUTORIA" && disciplina.Situação === "Matrícula") {
-          if (!disciplinasUnicas.has(nomeDisciplina)) {
-            disciplinasUnicas.set(nomeDisciplina, []);
-          }
-          // Converte notas para números e adiciona à matriz de notas da disciplina
-          const notas = [
-            parseFloat(disciplina.Nota_Bim_1.trim()),
-            parseFloat(disciplina.Nota_Bim_2.trim()),
-          ];
-          disciplinasUnicas.get(nomeDisciplina)?.push(...notas);
-        }
-      });
-    });
-
-    return Array.from(disciplinasUnicas.keys()).map((disciplina) => ({
-      disciplina,
-      notas: disciplinasUnicas.get(disciplina) || [],
-    }));
-  };
-
-  const disciplinasUnicasComNotas = listarDisciplinasUnicas();
-
-  // Função para listar alunos com média inferior a 6 em uma disciplina
-  const listarAlunosComMediaInferiorASeis = (disciplina: string): Aluno[] => {
-    const alunosComMediaInferior: Aluno[] = [];
-  
-    alunos.forEach((aluno) => {
-      const notasDisciplina = aluno.Disciplinas.find(
-        (disc) =>
-          disc.Disciplina.includes(disciplina) && disc.Situação === 'Matrícula'
-      );
-      
-      if (notasDisciplina) {
-        const nota1 = parseFloat(notasDisciplina.Nota_Bim_1.trim());
-        const nota2 = parseFloat(notasDisciplina.Nota_Bim_2.trim());
-        
-        const media = .5*(nota1 + nota2);
-  
-        if (media < 6) {
-          alunosComMediaInferior.push(aluno);
-        }
-      }
-    });
-  
-    return alunosComMediaInferior;
-  };
+  const disciplinasDoCurso = extractUniqueDisciplines(alunos) //array com os nomes das disciplinas
 
   return (
-    <div>
+    <div >
       <FolhaA4>
-        <div>
-          No programa de Tutoria há {alunos.length} alunos de {curso?.Nome}
+        <div className='m-4'>
+          No programa de Tutoria há {alunos.length} alunos de {curso?.Nome}. Sendo que há<span> </span>  
+          {contarAlunos(alunos).ingressantes} {contarAlunos(alunos).ingressantes===1?" ingressante":" ingressantes"},<span> </span>
+          {contarAlunos(alunos).repetentes} {contarAlunos(alunos).repetentes===1?" repetente":" repetentes"} e <span> </span> 
+          {contarAlunos(alunos).segundoAno} no 2<sup><u>o</u></sup> Ano.
         </div>
         <div>
+          <h1 className="textlg text-center py-2">Distribuição dos alunos por Tutor:</h1>
           <table className="w-full border-collapse border border-gray-200 text-xs">
             <thead>
               <tr>
@@ -122,7 +59,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
                   <td className="py-1 px-4 border border-gray-200 text-xs">{tutor}</td>
                   <td className="py-1 px-4 border border-gray-200 text-xs">
                     <ul>
-                      {alunosAgrupados[tutor].map((aluno: Aluno, alunoIndex: number) => (
+                      {(alunosAgrupados[tutor] as Aluno[]).map((aluno: Aluno, alunoIndex: number) => (
                         <li key={alunoIndex} className="mb-2">{aluno.Nome}</li>
                       ))}
                     </ul>
@@ -136,7 +73,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
 
       {/* Lista de todas as disciplinas */}
       <FolhaA4>
-        <div>
+        <div className='m-4'>
           <table className="w-full border-collapse border border-gray-200 mt-2 text-xs">
             <thead>
               <tr>
@@ -144,9 +81,9 @@ const Page = async ({ params }: { params: { curso: string } }) => {
               </tr>
             </thead>
             <tbody>
-              {disciplinasUnicasComNotas.map((disciplina, index) => (
+              {disciplinasDoCurso.map((disciplina, index) => (
                 <tr key={index}>
-                  <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina.disciplina}</td>
+                  <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina}</td>
                 </tr>
               ))}
             </tbody>
@@ -154,8 +91,55 @@ const Page = async ({ params }: { params: { curso: string } }) => {
         </div>
       </FolhaA4>
 
+      {disciplinasDoCurso.map(async (disc)=>{
+        const alunosdisc = await pegaCurso(`${params.curso}&disciplina=${disc}`)
+        return (<div>
+          <FolhaA4>
+            <div className='m-4'>
+              <h1 className='text-lg text-center'>{disc}</h1>
+<p>A média de todos os estudantes em {disc} é igual a <span className='text-red-500'> {calculateAverageForDiscipline(alunosdisc, disc)}</span></p>
+<div className="overflow-x-auto">
+      <table className="min-w-full">
+        <thead>
+          <tr>
+            <th className="px-6 py-1 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Nome do Aluno
+            </th>
+            <th className="px-6 py-1 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Status
+            </th>
+            <th className="px-6 py-1 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+              Média
+            </th>
+          </tr>
+        </thead>
+        <tbody className="bg-white">
+          {alunosdisc.map((aluno:Aluno, index:number) => (
+            <tr
+              key={index}
+              className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+            >
+              <td className="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                {aluno.Nome}
+              </td>
+              <td className="px-6 py-1 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                {aluno.Status}
+              </td>
+              <td className="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                {aluno.Disciplinas[0].Média_Parcial_12}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+            </div>
+          </FolhaA4>
+        </div>)
+      })}
+
       {/* Lista de disciplinas com média das notas */}
-      {disciplinasUnicasComNotas.map((disciplinaComNotas, index) => (
+      {/* {disciplinasUnicasComNotas.map((disciplinaComNotas, index) => (
         <FolhaA4 key={index}>
           <div>
             Disciplina: {disciplinaComNotas.disciplina}
@@ -194,7 +178,8 @@ const Page = async ({ params }: { params: { curso: string } }) => {
             </table>
           </div>
         </FolhaA4>
-      ))}
+      ) */}
+      {/* )} */}
     </div>
   );
 };

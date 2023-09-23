@@ -5,7 +5,7 @@ import Image from "next/image"
 
 
 async function pegaAluno(matricula: string) {
-    const aluno = await fetch(`https://mpfaraujo.com.br/api/boletim/aluno?matricula=${matricula}`, { next: { revalidate: 60 } })
+    const aluno = await fetch(`https://mpfaraujo.com.br/api/boletim/aluno?matricula=${matricula}`, {cache:"no-cache"})
     return aluno.json()
 }
 
@@ -57,6 +57,7 @@ export default function Page ({params}:{params:{id:string}}){
                             <FolhaA4 key={tutorando.Nome}>
                                 <span className="text-indigo-800 bg-gray-100 w-full mr-3">{tutorando.Nome}</span>
                                 <span className="text-indigo-800 bg-gray-100 w-full mx-3">{tutorando.Turma}</span>
+                                <span className="text-indigo-800 bg-gray-100 w-full mx-3">{aluno.Status}</span>
                                 <Boletim disciplinas={aluno.Disciplinas} />
                             </FolhaA4>)
                     })}

@@ -30,7 +30,7 @@ export const Boletim =({disciplinas}:{disciplinas:any[]})=>{
           <p className="text-gray-900 whitespace-no-wrap">{disciplina.Nota_Bim_2}</p>
         </td>
         <td className="border-b border-gray-200 bg-white text-sm flex">
-          <span className="relative">{Media(disciplina.Nota_Bim_1, disciplina.Nota_Bim_2)}</span>
+          <span className="relative">{Media(disciplina.Média_Parcial_12, disciplina.Média_Parcial_12)}</span>
           <span className="relative">{Compara(disciplina.Nota_Bim_1, disciplina.Nota_Bim_2)}</span>
         </td>
       </tr>
