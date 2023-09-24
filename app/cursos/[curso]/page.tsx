@@ -142,13 +142,13 @@ const Page = async ({ params }: { params: { curso: string } }) => {
                         key={index}
                         className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
                       >
-                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
+                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium  ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
                           {aluno.Nome}
                         </td>
-                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
+                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium  ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
                           {aluno.Status}
                         </td>
-                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
+                        <td className={`px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium  ${(parseFloat(aluno.Disciplinas[0].Média_Parcial_12)>=6?'text-blue-400':'text-red-400')}`}>
                           {aluno.Disciplinas[0].Média_Parcial_12}
                         </td>
                       </tr>
