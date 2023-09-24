@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import { FolhaA4 } from "@/components/FolhaA4/folhaa4";
 import { cursos } from "@/utils/codcursos";
+import tutores from "@/utils/tutorMatricula.json"
 import { agruparAlunosPorTutor, contarAlunos, calculateAverageForDiscipline, extrairTurma,filterStudentsByAverage, calculateAverageGrades, extractUniqueDisciplinesOrdered } from '@/utils/utilidades';
 
 interface Aluno {
@@ -55,9 +57,12 @@ const Page = async ({ params }: { params: { curso: string } }) => {
               </tr>
             </thead>
             <tbody>
-              {Object.keys(alunosAgrupados).map((tutor, index) => (
+              {Object.keys(alunosAgrupados).map((tutor, index) => {
+                const codTutores = tutores.find(item =>item.Tutor===tutor)
+                return ( 
                 <tr key={index}>
-                  <td className="py-1 px-4 border border-gray-200 text-xs">{tutor}</td>
+                  <td className="py-1 px-4 border border-gray-200 text-xs">
+                    <Link href={`/tutor/${codTutores?.id}`}>{tutor}</Link>  </td>
                   <td className="py-1 px-4 border border-gray-200 text-xs">
                     <ul>
                       {(alunosAgrupados[tutor] as Aluno[]).map((aluno: Aluno, alunoIndex: number) => (
@@ -66,7 +71,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
                     </ul>
                   </td>
                 </tr>
-              ))}
+              )})}
             </tbody>
           </table>
         </div>
