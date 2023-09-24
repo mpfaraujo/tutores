@@ -4,17 +4,54 @@ const data = [
   ];
   
   // Função para extrair disciplinas únicas sem o código
-export   function extractUniqueDisciplines(data) {
-    const uniqueDisciplines = new Set();
-    data.forEach((student) => {
-      student.Disciplinas.forEach((discipline) => {
-        const disciplineName = discipline.Disciplina.split(' - ')[1]; // Remove o código da disciplina
-        uniqueDisciplines.add(disciplineName);
-      });
-    });
-    return Array.from(uniqueDisciplines);
-  }
+// export   function extractUniqueDisciplines(data) {
+//     const uniqueDisciplines = new Set();
+//     data.forEach((student) => {
+//       student.Disciplinas.forEach((discipline) => {
+//         const disciplineName = discipline.Disciplina.split(' - ')[1]; // Remove o código da disciplina
+//         uniqueDisciplines.add(disciplineName);
+//       });
+//     });
+//     return Array.from(uniqueDisciplines);
+//   }
 
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+export function extractUniqueDisciplinesOrdered(data) {
+  const disciplineCount = {}; // Um objeto para contar quantos alunos estão abaixo de 6 em cada disciplina
+
+  data.forEach((student) => {
+    student.Disciplinas.forEach((discipline) => {
+      const disciplineName = discipline.Disciplina.split(' - ')[1]; // Remove o código da disciplina
+
+      if (!disciplineCount[disciplineName]) {
+        disciplineCount[disciplineName] = 0;
+      }
+
+      // Verifique se a média é menor que 6 e incremente o contador
+      if (parseFloat(discipline.Média_Parcial_12) < 6) {
+        disciplineCount[disciplineName]++;
+      }
+    });
+  });
+
+  // Agora, crie um array de objetos para representar as disciplinas e a contagem de alunos abaixo de 6
+  const disciplinesWithCount = Object.keys(disciplineCount).map((disciplineName) => ({
+    Nome: disciplineName,
+    abaixoDe6: disciplineCount[disciplineName],
+  }));
+
+  // Ordene o array com base no número de alunos abaixo de 6 em ordem decrescente
+  disciplinesWithCount.sort((a, b) => b.abaixoDe6 - a.abaixoDe6);
+
+  return disciplinesWithCount;
+}
+
+
+
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   export // Função para calcular a média das notas dos dois primeiros bimestres
   function calculateAverageGrades(data) {
     const result = [];

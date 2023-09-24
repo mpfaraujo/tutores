@@ -1,6 +1,6 @@
 import { FolhaA4 } from "@/components/FolhaA4/folhaa4";
 import { cursos } from "@/utils/codcursos";
-import {extractUniqueDisciplines, calculateAverageGrades, filterStudentsByAverage, calculateAverageForDiscipline} from '@/utils/utilidades'
+import {extractUniqueDisciplinesOrdered, calculateAverageGrades, filterStudentsByAverage, calculateAverageForDiscipline} from '@/utils/utilidades'
 
 interface Aluno {
   Matrícula: string;
@@ -24,14 +24,14 @@ async function pegaCurso(cod: string) {
   }
 
 const Page = async()=>{
-const alunos = await pegaCurso("MET&disciplina=GEOGRAFIA")
-const disciplinas = extractUniqueDisciplines(alunos)
+const alunos = await pegaCurso("EL&disciplina=GEOGRAFIA")
+const disciplinas = extractUniqueDisciplinesOrdered(alunos)
 const medias = calculateAverageGrades(alunos)
 const abaixode6emMatematica = filterStudentsByAverage(medias, "GEOGRAFIA")
-const mediaGeografia = calculateAverageForDiscipline(medias, "GEOGRAFIA")
+const mediaGeografia = calculateAverageForDiscipline(alunos, "MATEMÁTICA A")
 return (<div>
 
-        <pre>{JSON.stringify(alunos, null, 2)}</pre>
+        <pre>{JSON.stringify(abaixode6emMatematica, null, 2)}</pre>
 
 </div>)
 

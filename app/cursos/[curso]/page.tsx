@@ -1,7 +1,7 @@
 import React from 'react';
 import { FolhaA4 } from "@/components/FolhaA4/folhaa4";
 import { cursos } from "@/utils/codcursos";
-import { agruparAlunosPorTutor, extractUniqueDisciplines, contarAlunos, calculateAverageForDiscipline, extrairTurma } from '@/utils/utilidades';
+import { agruparAlunosPorTutor, contarAlunos, calculateAverageForDiscipline, extrairTurma,filterStudentsByAverage, calculateAverageGrades, extractUniqueDisciplinesOrdered } from '@/utils/utilidades';
 
 interface Aluno {
   Matrícula: string;
@@ -33,7 +33,8 @@ const Page = async ({ params }: { params: { curso: string } }) => {
 
   const alunosAgrupados: AlunosAgrupados = agruparAlunosPorTutor(alunos) as AlunosAgrupados
 
-  const disciplinasDoCurso = extractUniqueDisciplines(alunos) //array com os nomes das disciplinas
+  // const disciplinasDoCurso = extractUniqueDisciplines(alunos) //array com os nomes das disciplinas
+  const disciplinasDoCurso = extractUniqueDisciplinesOrdered(alunos)
 
   return (
     <div >
@@ -60,7 +61,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
                   <td className="py-1 px-4 border border-gray-200 text-xs">
                     <ul>
                       {(alunosAgrupados[tutor] as Aluno[]).map((aluno: Aluno, alunoIndex: number) => (
-                        <li key={alunoIndex} className="mb-2">{aluno.Nome}</li>
+                        <li key={alunoIndex} className="mb-1">{aluno.Nome}</li>
                       ))}
                     </ul>
                   </td>
@@ -78,16 +79,19 @@ const Page = async ({ params }: { params: { curso: string } }) => {
             <thead>
               <tr>
                 <th className="py-1 px-4 bg-gray-100 border border-gray-200">Disciplinas</th>
+                <th className="py-1 px-4 bg-gray-100 border border-gray-200">Alunos Abaixo da Média</th>
               </tr>
             </thead>
             <tbody>
   {disciplinasDoCurso.map((disciplina, index) => {
-    if (disciplina === "TUTORIA") {
+    const medias = calculateAverageGrades(alunos)
+    if (disciplina.Nome === "TUTORIA") {
       return null;
     } else {
       return (
         <tr key={index}>
-          <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina}</td>
+          <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina.Nome}</td>
+          <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina.abaixoDe6}</td>
         </tr>
       );
     }
@@ -98,7 +102,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
       </FolhaA4>
 
       {disciplinasDoCurso.map(async (disc) => {
-  const alunosdisc:Aluno[] = await pegaCurso(`${params.curso}&disciplina=${disc}`);
+  const alunosdisc:Aluno[] = await pegaCurso(`${params.curso}&disciplina=${disc.Nome}`);
   const turmas: string[] = [];
   alunosdisc.forEach((aluno) => {
     const turma = extrairTurma(aluno.Turma);
@@ -106,12 +110,12 @@ const Page = async ({ params }: { params: { curso: string } }) => {
       turmas.push(turma);
     }
   });
-  if (disc === "TUTORIA") {return null} else{
+  if (disc.Nome === "TUTORIA") {return null} else{
   return (
-    <div key={disc}>
+    <div key={disc.Nome}>
       <FolhaA4>
         <div className="m-4">
-          <h1 className="text-lg text-center">{disc}</h1>
+          <h1 className="text-lg text-center">{disc.Nome}</h1>
           <div className="overflow-x-auto">
             {turmas.map((turma) => {
               const alunosTurma = alunosdisc.filter(
