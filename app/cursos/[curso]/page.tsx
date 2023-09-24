@@ -118,7 +118,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
                 (aluno) => extrairTurma(aluno.Turma) === turma
               );
 
-              return (<div><h2>Turma {turma+params.curso}</h2>
+              return (<div key={turma+params.curso}><h2>Turma {turma+params.curso}</h2>
                 <table
                   key={turma}
                   className="min-w-full mb-4"
