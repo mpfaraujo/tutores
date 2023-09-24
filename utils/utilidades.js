@@ -84,7 +84,7 @@ export   function extractUniqueDisciplines(data) {
         if (nomeDisciplina === disciplinaAlvo) {
           const mediaAluno = parseFloat(discipline.Média_Parcial_12);
   
-          console.log(`Média do aluno: ${mediaAluno}`);
+          // console.log(`Média do aluno: ${mediaAluno}`);
   
           totalMedia += mediaAluno;
           totalStudents += 1;
@@ -92,7 +92,7 @@ export   function extractUniqueDisciplines(data) {
       });
     });
   
-    console.log(`Total de alunos na disciplina ${disciplinaAlvo}: ${totalStudents}`);
+    // console.log(`Total de alunos na disciplina ${disciplinaAlvo}: ${totalStudents}`);
   
     if (totalStudents === 0) {
       return 0; // Retorna 0 se nenhum aluno estiver na disciplina especificada.
@@ -140,3 +140,16 @@ export   function extractUniqueDisciplines(data) {
     return alunosAgrupados;
 };
   
+
+export function extrairTurma(codigoTurma) {
+  // Use expressões regulares para extrair os dois primeiros caracteres da turma
+  const match = codigoTurma.match(/^(\d+[AB])/);
+  
+  if (match) {
+    // A correspondência [1] contém os dois primeiros caracteres da turma
+    return match[1];
+  }
+  
+  // Retorne um valor padrão se não for possível extrair a turma
+  return 'Turma desconhecida';
+}

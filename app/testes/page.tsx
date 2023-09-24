@@ -24,14 +24,14 @@ async function pegaCurso(cod: string) {
   }
 
 const Page = async()=>{
-const alunos = await pegaCurso("INFO")
+const alunos = await pegaCurso("MET&disciplina=GEOGRAFIA")
 const disciplinas = extractUniqueDisciplines(alunos)
 const medias = calculateAverageGrades(alunos)
 const abaixode6emMatematica = filterStudentsByAverage(medias, "GEOGRAFIA")
 const mediaGeografia = calculateAverageForDiscipline(medias, "GEOGRAFIA")
 return (<div>
 
-        <pre>{JSON.stringify(mediaGeografia, null, 2)}</pre>
+        <pre>{JSON.stringify(alunos, null, 2)}</pre>
 
 </div>)
 

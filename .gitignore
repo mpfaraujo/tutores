@@ -41,3 +41,4 @@ next-env.d.ts
 /utils/tutores.json
 /utils/dados.json
 /app/prepara/*
+/app/testes/*
