@@ -85,11 +85,14 @@ const Page = async ({ params }: { params: { curso: string } }) => {
               <tr>
                 <th className="py-1 px-4 bg-gray-100 border border-gray-200">Disciplinas</th>
                 <th className="py-1 px-4 bg-gray-100 border border-gray-200">Alunos Abaixo da Média</th>
+                <th className="py-1 px-4 bg-gray-100 border border-gray-200">Percentual</th>
               </tr>
             </thead>
             <tbody>
-  {disciplinasDoCurso.map((disciplina, index) => {
-    const medias = calculateAverageGrades(alunos)
+  {disciplinasDoCurso.map(async(disciplina, index) => {
+    // const medias = calculateAverageGrades(alunos)
+  const alunosdisc:Aluno[] = await pegaCurso(`${params.curso}&disciplina=${disciplina.Nome}`);
+
     if (disciplina.Nome === "TUTORIA") {
       return null;
     } else {
@@ -97,6 +100,7 @@ const Page = async ({ params }: { params: { curso: string } }) => {
         <tr key={index}>
           <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina.Nome}</td>
           <td className="py-1 px-4 border border-gray-200 text-xs">{disciplina.abaixoDe6}</td>
+          <td className="py-1 px-4 border border-gray-200 text-xs">{(100*disciplina.abaixoDe6/alunosdisc.length).toFixed(2)+'%'}</td>
         </tr>
       );
     }
