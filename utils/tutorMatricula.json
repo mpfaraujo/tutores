@@ -108,6 +108,11 @@
     "Tutor": "Antonio M.B. Feres",
     "tutorandos": [
       {
+        "Nome": "Maria Vitoria Botto Ferreira Barbosa",
+        "Turma": "1BINFO",
+        "Matrícula": "2202154INFOINT"
+      },
+      {
         "Nome": "Breno Henrique Teixeira Ferreira",
         "Turma": "1BEL",
         "Matrícula": "2202436ELINT"
@@ -576,13 +581,9 @@
   },
   {
     "id": "26",
-    "Tutor": "Antonio M.B. Feres",
+    "Tutor": "Keila Lúcio de Carvalho",
     "tutorandos": [
-      {
-        "Nome": "Maria Vitoria Botto Ferreira Barbosa",
-        "Turma": "1BINFO",
-        "Matrícula": "2202154INFOINT"
-      }
+
     ]
   },
   {
